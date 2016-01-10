@@ -1,0 +1,10 @@
+{
+  "apps": [{
+    "name": "feedit_server",
+    "script": "index.js",
+    "args": [],
+    "exec_mode": "cluster",
+    "instances": 1,
+    "exec_interpreter": "node"
+  }]
+}

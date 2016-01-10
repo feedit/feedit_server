@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="{{ description }}">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>Feedit - {{ view }}</title>
+  <link rel="shortcut icon" href="/blog/avatar.png" type="image/x-icon" />
+  <link rel="stylesheet"
+  href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/feedit/stylesheet/index.css"/>
+  <link rel="stylesheet" href="/feedit/stylesheet/{{ view }}.css"/>
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+  <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="/feedit/3rdparty/grace.js"></script>
+</head>
+<body>
+<header class="navbar">
+  <div class="container text-right user">
+    {% if session.user %}
+    <input type="hidden" value="true" id="isLogin"/>
+    <a href="/feedit/logout">退出</a>
+    {% else %}
+    <a href="/feedit/login">登录</a>
+    {% endif %}
+  </div>
+</header>
+{% block content %}{% endblock %}
+<footer>
+  <div class="text-center">
+    <br/>
+    &copy;&nbsp;xdf 2012
+  </div>
+</footer>
+<script src="/feedit/javascript/index.js"></script>
+<script src="/feedit/javascript/{{ view }}.js"></script>
+</body>
+</html>
+

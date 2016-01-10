@@ -1,0 +1,52 @@
+#content {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 530px;
+  min-height: 400px;
+  background-image: url('../images/form.png');
+  background-repeat: no-repeat;
+}
+.login_button {
+  position: absolute;
+  width: 73px;
+  height: 33px;
+  background-image: url('../images/button.png');
+  margin-top: 72px;
+  margin-left: 474px;
+}
+.login_input_a {
+  position: absolute;
+  width: 215px;
+  height: 35px;
+  background-image: url('../images/input_a.png');
+  margin-top: 72px;
+  margin-left: 28px;
+}
+.login_input_b {
+  position: absolute;
+  width: 215px;
+  height: 35px;
+  background-image: url('../images/input_b.png');
+  margin-top: 72px;
+  margin-left: 250px;
+}
+.login input {
+  width: 212px;
+  height: 35px;
+  border: 0;
+  color: #330000;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Microsoft YaHei", Verdana, sans-serif;
+  background-color: transparent;
+  margin-left: 3px;
+}
+.lost_password {
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 380px;
+}
+.lost_password a {
+  text-decoration: none;
+  color: rgb(51, 0, 0);
+}

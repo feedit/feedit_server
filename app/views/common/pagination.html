@@ -1,0 +1,27 @@
+    {% if pagination and pagination.total > 1 %}
+    <input type="hidden" value="{{ pagination.current }}" id="current_page"/>
+    <nav class="pagination-nav">
+      <ul class="pagination pull-right">
+        <li {% if not pagination.previous %} class="disabled" {% endif %}>
+        <a href="?page={{ pagination.previous }}{% if pagination.search
+          %}&search={{ pagination.search }}{%
+          endif %}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        {% for i in range(pagination.start, pagination.end) -%}
+        <li {% if pagination.current == i %} class="active" {% endif %}><a
+          href="?page={{ i }}{% if pagination.search
+          %}&search={{ pagination.search }}{%
+          endif %}">{{ i }}</a></li>
+        {%- endfor %}
+        <li {% if not pagination.next %} class="disabled" {% endif %}>
+          <a href="?page={{ pagination.next }}{% if pagination.search
+          %}&search={{ pagination.search }}{%
+          endif %}" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    {% endif %}

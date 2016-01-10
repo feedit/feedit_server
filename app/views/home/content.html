@@ -1,0 +1,17 @@
+<div class="container">
+  <div id="content"></div>
+  {% if session.user %}
+  {% include 'common/pagination.html' %}
+  {% endif %}
+</div>
+<script type="template" id="template">
+  <ul>
+    <#each val in $list#>
+    <li class="item <#=$val.read#>" data-id="<#=$val.id#>" data-url="<#=$val.url#>">
+      <span class="index"><#=$val.index#></span>
+      <span class="title"><#=$val.title#></span>
+      <span class="time"><#=$val.create_time#></span>
+    </li>
+    <#/each#>
+  </ul>
+</script>

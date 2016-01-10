@@ -1,0 +1,53 @@
+{
+  "name": "feedit_server",
+  "version": "1.0.0",
+  "description": "Server side for feedit.",
+  "keywords": [
+    "server"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feedit/feedit_server.git"
+  },
+  "dependencies": {
+    "koa": "~0.13.0",
+    "koa-qs": "~2.0.0",
+    "koa-session": "~3.0.0",
+    "koa-static": "~1.4.7",
+    "koa-logger": "~1.2.2",
+    "koa-router": "~3.7.0",
+    "koa-safe-jsonp": "~0.3.0",
+    "co": "~3.1.0",
+    "co-body": "~1.1.0",
+    "lodash": "~3.5.0",
+    "nunjucks": "1.2.0",
+    "ipv4": "*",
+    "moment": "~2.9.0",
+    "mongoose": "~3.8.25"
+  },
+  "devDependencies": {
+    "co-mocha": "*",
+    "istanbul": "*",
+    "jshint": "*",
+    "mocha": "2.2.4",
+    "pm2": "~0.15.10",
+    "should": "~4.0.4",
+    "should-http": "0.0.2"
+  },
+  "scripts": {
+    "test": "make test",
+    "jshint": "make jshint"
+  },
+  "precommit": [
+    "jshint"
+  ],
+  "engines": {
+    "node": ">= 0.10.x"
+  },
+  "homepage": "https://github.com/feedit/feedit_server",
+  "author": "xudafeng",
+  "email": "xudafeng@126.com",
+  "blog": "http://xdf.me",
+  "license": "MIT"
+}
