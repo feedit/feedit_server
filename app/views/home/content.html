@@ -1,4 +1,9 @@
 <div class="container">
+  <div id="search">
+    <form action="" method="get">
+      Keywords: <input type="text" name="search" /> <input type="submit" value="Submit" />
+    </form>
+  </div>
   <div id="content"></div>
   {% if session.user %}
   {% include 'common/pagination.html' %}
