@@ -26,3 +26,7 @@
 #content li .time {
   float: right;
 }
+#search {
+  text-align: center;
+  padding: 30px 0;
+}

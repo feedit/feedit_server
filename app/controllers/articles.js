@@ -23,6 +23,8 @@ function *getArticles() {
   var options = {
     search: this.query.search
   };
+  var page = this.query.page || 1;
+
   var item = new Item();
 
   if (unread) {
@@ -44,7 +46,7 @@ function *getArticles() {
     };
     return;
   }
-  var page = this.query.page || 1;
+
   var count = yield item.getTotalCount();
   var data = [];
   _data.forEach(function(d, k) {
