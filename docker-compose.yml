@@ -1,0 +1,23 @@
+feedit-master:
+  restart: always
+  build: .
+  links:
+    - mongo:mongo
+  environment:
+    - DB_SERVICE=mongo
+    - DB_PORT=27017
+    - DB_NAME=feedit-dev
+  command: bash -c "./node_modules/.bin/pm2 start deploy.json && ./node_modules/.bin/pm2 logs"
+
+db:
+  restart: always
+  image: mongo
+  volumes:
+    - /var/lib/mongo
+  command: "true"
+
+mongo:
+  restart: always
+  image: mongo
+  volumes_from:
+    - db
