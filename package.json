@@ -13,7 +13,6 @@
   "dependencies": {
     "co": "~3.1.0",
     "co-body": "~1.1.0",
-    "ipv4": "*",
     "koa": "~0.13.0",
     "koa-logger": "~1.2.2",
     "koa-qs": "~2.0.0",
@@ -21,11 +20,11 @@
     "koa-safe-jsonp": "~0.3.0",
     "koa-session": "~3.0.0",
     "koa-static": "~1.4.7",
-    "lodash": "~3.5.0",
-    "moment": "~2.9.0",
     "mongo-export": "~0.3.1",
     "mongoose": "4.3.5",
-    "nunjucks": "1.2.0"
+    "nunjucks": "1.2.0",
+    "xlogger": "^1.0.5",
+    "xutil": "^1.0.2"
   },
   "devDependencies": {
     "co-mocha": "*",

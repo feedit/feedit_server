@@ -14,6 +14,7 @@
 'use strict';
 
 var mongoose = require('mongoose');
+
 var _ = require('../../lib/helper');
 
 var Schema = mongoose.Schema;
