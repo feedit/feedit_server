@@ -22,7 +22,7 @@
     "koa-static": "~1.4.7",
     "mongo-export": "~0.3.1",
     "mongoose": "4.3.5",
-    "nunjucks": "1.2.0",
+    "nunjucks": "^3.0.1",
     "xlogger": "^1.0.5",
     "xutil": "^1.0.2"
   },
@@ -30,10 +30,7 @@
     "co-mocha": "*",
     "istanbul": "*",
     "jshint": "*",
-    "mocha": "2.2.4",
-    "pm2": "1.0.0",
-    "should": "~4.0.4",
-    "should-http": "0.0.2"
+    "pm2": "1.0.0"
   },
   "scripts": {
     "test": "make test",
@@ -42,12 +39,6 @@
   "precommit": [
     "jshint"
   ],
-  "engines": {
-    "node": ">= 0.10.x"
-  },
   "homepage": "https://github.com/feedit/feedit_server",
-  "author": "xudafeng",
-  "email": "xudafeng@126.com",
-  "blog": "http://xdf.me",
   "license": "MIT"
 }
