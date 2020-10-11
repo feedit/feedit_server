@@ -5,40 +5,44 @@
   "keywords": [
     "server"
   ],
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/feedit/feedit_server.git"
   },
   "dependencies": {
-    "co": "~3.1.0",
-    "co-body": "~1.1.0",
-    "koa": "~0.13.0",
-    "koa-logger": "~1.2.2",
-    "koa-qs": "~2.0.0",
-    "koa-router": "~3.7.0",
-    "koa-safe-jsonp": "~0.3.0",
-    "koa-session": "~3.0.0",
-    "koa-static": "~1.4.7",
-    "mongo-export": "~0.3.1",
-    "mongoose": "4.3.5",
+    "egg": "^2.0.0",
+    "egg-i18n": "^2.0.0",
+    "egg-scripts": "^2.4.0",
+    "egg-sequelize": "^4.1.0",
     "nunjucks": "^3.0.1",
-    "xlogger": "^1.0.5",
-    "xutil": "^1.0.2"
+    "xutil": "^1.0.2",
+    "sqlite3": "^4.0.2"
   },
   "devDependencies": {
-    "co-mocha": "*",
-    "istanbul": "*",
-    "jshint": "*",
-    "pm2": "1.0.0"
+    "egg-bin": "^4.3.6",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.13.1",
+    "eslint": "^4.12.1",
+    "eslint-config-egg": "^5.1.1",
+    "husky": "^1.3.1"
   },
   "scripts": {
-    "test": "make test",
-    "jshint": "make jshint"
+    "start": "npm run db:migrate && eggctl start --port=9200 --title=egg-server-datahub",
+    "stop": "eggctl stop --title=egg-server-datahub",
+    "dev": "npm run db:migrate && egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint && npm run db:migrate && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "npm run db:migrate && egg-bin cov",
+    "lint": "eslint . --fix",
+    "db:migrate": "sequelize db:migrate",
+    "db:migrate:undo": "sequelize db:migrate:undo",
+    "migration:create": "sequelize migration:create --name"
   },
-  "precommit": [
-    "jshint"
-  ],
-  "homepage": "https://github.com/feedit/feedit_server",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
   "license": "MIT"
 }
